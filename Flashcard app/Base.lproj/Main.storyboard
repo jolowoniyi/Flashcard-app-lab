@@ -49,8 +49,19 @@
                                 <color key="highlightedColor" red="0.62852387649999997" green="1" blue="0.65496070279999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ipy-jo-3WS">
+                                <rect key="frame" x="172" y="502" width="30" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" red="0.81533623831998325" green="0.85714098859999999" blue="0.10879599845502778" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="szO-eH-Kog" kind="show" id="41C-8U-N8J"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.75705877595555349" green="1" blue="0.74716374523257656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.7498768643" green="0.96984057739999996" blue="0.90530772839999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <connections>
@@ -70,6 +81,73 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="509.60000000000002" y="46.326836581709152"/>
+        </scene>
+        <!--Creation View Controller-->
+        <scene sceneID="Ygq-LI-fRB">
+            <objects>
+                <viewController id="JAt-Rd-Wxt" customClass="CreationViewController" customModule="Flashcard_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7vW-Fq-WYo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Question " borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VEa-kM-ztl">
+                                <rect key="frame" x="62" y="124" width="251" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Answer" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B6g-6M-6zQ">
+                                <rect key="frame" x="62" y="191" width="251" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7498768643" green="0.96984057739999996" blue="0.90530772839999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Dfn-0s-g6h"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="f1j-0I-XAH">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="sjC-F9-YG8">
+                            <connections>
+                                <action selector="didTapOnCancel:" destination="JAt-Rd-Wxt" id="DsL-A6-keA"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="hMM-Hg-1bn">
+                            <connections>
+                                <action selector="didTapOnDone:" destination="JAt-Rd-Wxt" id="hdN-UB-6RS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="answerTextLabel" destination="B6g-6M-6zQ" id="kH8-Hr-HXb"/>
+                        <outlet property="questionTextLabel" destination="VEa-kM-ztl" id="hL0-G3-GZ9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FnI-Nz-L4z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2096.8000000000002" y="38.23088455772114"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HdL-Sc-nHv">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WuJ-Sw-rg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="szO-eH-Kog" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vPl-Ld-KIz">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="JAt-Rd-Wxt" kind="relationship" relationship="rootViewController" id="LUG-vA-mf7"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1157.5999999999999" y="38.23088455772114"/>
         </scene>
     </scenes>
 </document>

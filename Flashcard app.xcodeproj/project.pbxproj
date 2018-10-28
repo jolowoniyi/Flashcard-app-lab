@@ -14,6 +14,7 @@
 		9E52289F2172923100362C3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E52289D2172923100362C3F /* LaunchScreen.storyboard */; };
 		9E5228AA2172923100362C3F /* Flashcard_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5228A92172923100362C3F /* Flashcard_appTests.swift */; };
 		9E5228B52172923100362C3F /* Flashcard_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5228B42172923100362C3F /* Flashcard_appUITests.swift */; };
+		9EFBF28B21857509002EF59A /* CreationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFBF28A21857509002EF59A /* CreationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9E5228B02172923100362C3F /* Flashcard appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flashcard appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E5228B42172923100362C3F /* Flashcard_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcard_appUITests.swift; sourceTree = "<group>"; };
 		9E5228B62172923100362C3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EFBF28A21857509002EF59A /* CreationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				9E5228942172922F00362C3F /* AppDelegate.swift */,
 				9E5228962172922F00362C3F /* ViewController.swift */,
 				9E5228982172922F00362C3F /* Main.storyboard */,
+				9EFBF28A21857509002EF59A /* CreationViewController.swift */,
 				9E52289B2172923100362C3F /* Assets.xcassets */,
 				9E52289D2172923100362C3F /* LaunchScreen.storyboard */,
 				9E5228A02172923100362C3F /* Info.plist */,
@@ -258,6 +261,7 @@
 			files = (
 				9E5228972172922F00362C3F /* ViewController.swift in Sources */,
 				9E5228952172922F00362C3F /* AppDelegate.swift in Sources */,
+				9EFBF28B21857509002EF59A /* CreationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
