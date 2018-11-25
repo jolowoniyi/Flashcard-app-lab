@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var frontLabel: UILabel!
     @IBOutlet weak var backLabel: UILabel!
     
+    @IBOutlet weak var card: UIView!
     
     
     var flashcards = [Flashcard]()
@@ -43,8 +44,14 @@ class ViewController: UIViewController {
 
     @IBAction func didTapOnFlashCard(_ sender: Any) {
         
-        frontLabel.isHidden = true;
+       flipFlashcard()
         
+    }
+    func flipFlashcard(){
+       
+        UIView.transition(with: card, duration: 0.3, options: UIViewAnimationOptions .transitionFlipFromRight, animations: {
+            self.frontLabel.isHidden = true;
+        })
     }
     
     func updateLabels(){
@@ -93,20 +100,21 @@ class ViewController: UIViewController {
   
     @IBAction func didTapOnBack(_ sender: Any) {
         currentIndex = currentIndex - 1
-        updateLabels()
         
         updateNextPrevButtons()
+        animateCardIn()
     }
     @IBAction func didTapOnNext(_ sender: Any) {
         currentIndex = currentIndex + 1
-        updateLabels()
         
         updateNextPrevButtons()
+        animateCardOut()
         
     }
     
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    
     
     func updateNextPrevButtons(){
         if currentIndex == flashcards.count - 1{
@@ -125,5 +133,23 @@ class ViewController: UIViewController {
 
         
     }
-
+    func animateCardOut(){
+        UIView.animate(withDuration: 0.3, animations: {
+            self.card.transform = CGAffineTransform.identity.translatedBy(x: -300.0, y: 0.0)}, completion:{ finished in
+                
+                self.updateLabels()
+                
+                self.animateCardIn()
+                
+        } )
+    }
+    func animateCardIn(){
+        
+        card.transform = CGAffineTransform.identity.translatedBy(x: 300.0, y: 0.0)
+        
+        UIView.animate(withDuration: 0.3){
+            self.card.transform = CGAffineTransform.identity
+            self.updateLabels()
+        }
+    }
 }
